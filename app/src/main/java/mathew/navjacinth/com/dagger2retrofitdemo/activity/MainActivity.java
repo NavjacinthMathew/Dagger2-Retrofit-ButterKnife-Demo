@@ -1,7 +1,9 @@
-package mathew.navjacinth.com.dagger2retrofitdemo;
+package mathew.navjacinth.com.dagger2retrofitdemo.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import mathew.navjacinth.com.dagger2retrofitdemo.R;
 
 public class MainActivity extends AppCompatActivity {
 
