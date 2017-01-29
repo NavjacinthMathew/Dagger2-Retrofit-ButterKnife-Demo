@@ -23,7 +23,7 @@ public class RetrofitModule {
     public Retrofit providesRetrofit(Gson mGson) {
         return new Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create(mGson))
-                .baseUrl("https.api.github.com/")
+                .baseUrl("http://nmathew.pe.hu/json/")
                 .build();
     }
 }
