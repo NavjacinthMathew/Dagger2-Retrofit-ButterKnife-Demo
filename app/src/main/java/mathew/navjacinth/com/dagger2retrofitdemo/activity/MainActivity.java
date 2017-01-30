@@ -15,9 +15,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import mathew.navjacinth.com.dagger2retrofitdemo.R;
 import mathew.navjacinth.com.dagger2retrofitdemo.adapter.EmployeeAdapter;
-import mathew.navjacinth.com.dagger2retrofitdemo.dagger.component.DaggerMainActivityComponent;
-import mathew.navjacinth.com.dagger2retrofitdemo.dagger.component.MainActivityComponent;
-import mathew.navjacinth.com.dagger2retrofitdemo.dagger.module.RetrofitModule;
+import mathew.navjacinth.com.dagger2retrofitdemo.misc.MyApplication;
 import mathew.navjacinth.com.dagger2retrofitdemo.model.Employee;
 import mathew.navjacinth.com.dagger2retrofitdemo.model.EmployeeList;
 import mathew.navjacinth.com.dagger2retrofitdemo.network.GetEmployeeDataService;
@@ -43,11 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        MainActivityComponent component = DaggerMainActivityComponent.builder()
-                .retrofitModule(new RetrofitModule())
-                .build();
-
-        component.injectMainActivity(this);
+        ((MyApplication) getApplication()).getRetrofitComponent().injectMainActivity(this);
 
         getEmployeeData();
     }

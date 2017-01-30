@@ -9,6 +9,6 @@ import mathew.navjacinth.com.dagger2retrofitdemo.dagger.module.RetrofitModule;
  */
 
 @Component(modules = {RetrofitModule.class})
-public interface MainActivityComponent {
+public interface RetrofitComponent {
     void injectMainActivity(MainActivity mainActivity);
 }
