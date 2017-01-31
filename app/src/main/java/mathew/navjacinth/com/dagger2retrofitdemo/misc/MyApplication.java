@@ -21,8 +21,4 @@ public class MyApplication extends Application {
                 .retrofitModule(new RetrofitModule())
                 .build();
     }
-
-    public RetrofitComponent getRetrofitComponent() {
-        return retrofitComponent;
-    }
 }
