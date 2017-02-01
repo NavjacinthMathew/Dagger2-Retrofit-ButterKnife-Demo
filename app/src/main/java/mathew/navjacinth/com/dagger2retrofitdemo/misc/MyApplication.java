@@ -12,7 +12,7 @@ import mathew.navjacinth.com.dagger2retrofitdemo.dagger.module.RetrofitModule;
 
 public class MyApplication extends Application {
 
-    RetrofitComponent retrofitComponent;
+    private RetrofitComponent retrofitComponent;
 
     @Override
     public void onCreate() {
@@ -20,5 +20,9 @@ public class MyApplication extends Application {
         retrofitComponent = DaggerRetrofitComponent.builder()
                 .retrofitModule(new RetrofitModule())
                 .build();
+    }
+
+    public RetrofitComponent getRetrofitComponent() {
+        return retrofitComponent;
     }
 }
